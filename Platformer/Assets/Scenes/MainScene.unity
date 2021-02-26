@@ -1766,6 +1766,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1907751551 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1888215179190616, guid: 5039a551e8afdea41b5b04561da1d70a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1027897910}
+--- !u!95 &1907751552
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1907751551}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e38ed6c43f070be4ea6dbbef5078be96, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &1955462973 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4486623513962970, guid: 15a0f4c92ce91a445a42dd3cd398f9c5,

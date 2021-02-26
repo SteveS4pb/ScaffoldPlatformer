@@ -12,9 +12,11 @@ public class PlayerMovement : MonoBehaviour {
     float horizontalMove = 0f;
     bool jump = false;
     public CharacterController2D controller;
+    private Animator animator;
 
     void Start()
     {
+        animator = GetComponent<Animator>();
         controller = GetComponent<CharacterController2D>();
     }
 
@@ -22,10 +24,23 @@ public class PlayerMovement : MonoBehaviour {
     void Update()
     {
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+        animator.SetFloat("moveX",horizontalMove);
+
+        if (horizontalMove != 0)
+        {
+            animator.SetBool("moving", true);
+        }
+        else
+        {
+            animator.SetBool("moving", false);
+        }
+
         if (Input.GetButtonDown("Jump"))
         {
             jump = true;
         }
+        
+        animator.SetBool("jumping", jump);
     }
 
     // FixedUpdate is called multiple times per x amount of frames
