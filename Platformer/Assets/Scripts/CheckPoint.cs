@@ -9,16 +9,18 @@ using UnityEngine;
 public class CheckPoint : MonoBehaviour {
 
     public GameManager gameManager;
+    private Animator animator;
 
 	// Use this for initialization
 	void Start () {
-		
+        animator = GetComponent<Animator>();
+        animator.SetBool("activated", false);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+
+    }
 
    
     //When the player touches a check point, it updates the spawn position for the player
@@ -27,6 +29,7 @@ public class CheckPoint : MonoBehaviour {
         if(collision.tag == "Player")
         {
             gameManager.UpdateSpawnPosition(gameObject.transform);
+            animator.SetBool("activated", true);
         }
     }
 }
